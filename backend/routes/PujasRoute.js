@@ -15,6 +15,15 @@ import{
     deleteKasir,
 } from '../controllers/KasirController.js';
 
+import{
+    createTenan,
+    getAllTenan,
+    getTenanById,
+    updateTenan,
+    deleteTenan,
+} from '../controllers/TenanController.js';
+
+
 const router = express.Router();
 
 // Barang Routes
@@ -30,6 +39,14 @@ router.get('/kasir', getAllKasir);
 router.get('/kasir/:KodeKasir', getKasirById);
 router.put('/kasir/:KodeKasir', updateKasir);
 router.delete('/kasir/:KodeKasir', deleteKasir);
+
+//tenan Routes
+router.post('/tenan', createTenan);
+router.get('/tenan', getAllTenan);
+router.get('/tenan/:KodeTenan', getTenanById);
+router.put('/tenan/:KodeTenan', updateTenan);
+router.delete('/tenan/:KodeTenan', deleteTenan);
+
 
 
 export default router;
