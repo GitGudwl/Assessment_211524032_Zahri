@@ -23,6 +23,15 @@ import{
     deleteTenan,
 } from '../controllers/TenanController.js';
 
+import{
+    createNota,
+    deleteNotaByKodeNota,
+    getNotaByKodeKasir
+}from '../controllers/NotaController.js';
+
+import{
+    createBarangNota
+}from '../controllers/BarangNotaController.js';
 
 const router = express.Router();
 
@@ -47,6 +56,12 @@ router.get('/tenan/:KodeTenan', getTenanById);
 router.put('/tenan/:KodeTenan', updateTenan);
 router.delete('/tenan/:KodeTenan', deleteTenan);
 
+// Nota Routes
+router.post('/nota', createNota);
+router.delete('/nota/:KodeNota', deleteNotaByKodeNota);
+router.get('/nota/:KodeKasir', getNotaByKodeKasir);
 
 
+// Barang Nota Routes
+router.post('/barangnota', createBarangNota);
 export default router;

@@ -16,12 +16,7 @@ const Kasir = db.define('kasir', {
         type: DataTypes.STRING,
         allowNull: false
     }
-},{
-    tableName: 'kasir',
-    timestamps: false,
-    freezeTableName: true
 });
-
 
 export default Kasir;
 
